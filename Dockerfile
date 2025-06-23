@@ -1,32 +1,33 @@
 # ---------- Build Stage ----------
-    FROM node:20-alpine AS builder
+FROM node:20-alpine AS builder
 
-    WORKDIR /app
-    
-    # Install deps early to leverage cache
-    COPY package.json package-lock.json* ./
-    RUN npm install
-    
-    # Copy rest of the source
-    COPY . .
-    
-    # Build the project
-    RUN npm run build
-    
-    
-    # ---------- Production Stage ----------
-    FROM nginx:1.25-alpine
-    
-    # Remove default nginx static files
-    RUN rm -rf /usr/share/nginx/html/*
-    
-    # Copy build output from previous stage
-    COPY --from=builder /app/dist /usr/share/nginx/html
-    
-    # Copy custom nginx config if needed
-    # COPY nginx.conf /etc/nginx/nginx.conf
-    
-    EXPOSE 8080
-    
-    CMD ["nginx", "-g", "daemon off;"]
-    
+WORKDIR /app
+
+# Install deps first for better caching
+COPY package.json package-lock.json* ./
+RUN npm ci
+
+# Copy the full source code
+COPY . .
+
+# Build the Vite app
+RUN npm run build
+
+
+# ---------- Production Stage ----------
+FROM nginx:1.25-alpine
+
+# Clean existing html
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copy built Vite files to nginx
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Optional: Add Vite-friendly Nginx config
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Expose port
+EXPOSE 8080
+
+# Run nginx in foreground
+CMD ["nginx", "-g", "daemon off;"]
