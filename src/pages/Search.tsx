@@ -133,19 +133,19 @@ const Search = () => {
                       </a>
                     </Button>
                     <Button variant="outline" asChild>
-                      <a href="https://booking.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                      <a href="https://www.booking.com/searchresults.html?aid=356980&label=gog235jc-1DCAsobEIYYWhpbHlhLXJlc29ydC1tYWhlc2h3YXIxSDNYA2hsiAEBmAExuAEXyAEM2AED6AEB-AECiAIBqAIDuALS3uvCBsACAdICJDBjZmQ0ZTg4LTU4NzEtNDQ4Yi1iNDBjLTlkMDNkNWVlNzIzNNgCBOACAQ&sid=0cb4a79f2a92ff4f48d8c009f3b56999&dest_id=-2103184&dest_type=city&hlrd=14&" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
                         <ExternalLink className="w-4 h-4" />
                         Booking.com
                       </a>
                     </Button>
                     <Button variant="outline" asChild>
-                      <a href="https://goibibo.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                      <a href="https://www.goibibo.com/hotels/ahilya-resort-hotel-in-maheshwar-6014719297369564449/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
                         <ExternalLink className="w-4 h-4" />
                         GoIbibo
                       </a>
                     </Button>
                     <Button variant="outline" asChild>
-                      <a href="https://makemytrip.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+                      <a href="https://www.makemytrip.com/hotels/ahilya_resort-details-maheshwar.html" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
                         <ExternalLink className="w-4 h-4" />
                         MakeMyTrip
                       </a>
