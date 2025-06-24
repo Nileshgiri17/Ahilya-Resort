@@ -242,9 +242,9 @@ export const guestReviews: GuestReview[] = [
 ];
 
 export const bookingPartners: BookingPartner[] = [
-  { name: "Booking.com", logo: "/api/placeholder/120/40", url: "https://booking.com" },
-  { name: "GoIbibo", logo: "/api/placeholder/120/40", url: "https://goibibo.com" },
-  { name: "MakeMyTrip", logo: "/api/placeholder/120/40", url: "https://makemytrip.com" }
+  { name: "Booking.com", logo: "/api/placeholder/120/40", url: "https://www.booking.com/searchresults.html?aid=356980&label=gog235jc-1DCAsobEIYYWhpbHlhLXJlc29ydC1tYWhlc2h3YXIxSDNYA2hsiAEBmAExuAEXyAEM2AED6AEB-AECiAIBqAIDuALS3uvCBsACAdICJDBjZmQ0ZTg4LTU4NzEtNDQ4Yi1iNDBjLTlkMDNkNWVlNzIzNNgCBOACAQ&sid=0cb4a79f2a92ff4f48d8c009f3b56999&dest_id=-2103184&dest_type=city&hlrd=14&" },
+  { name: "GoIbibo", logo: "/api/placeholder/120/40", url: "https://www.goibibo.com/hotels/ahilya-resort-hotel-in-maheshwar-6014719297369564449/" },
+  { name: "MakeMyTrip", logo: "/api/placeholder/120/40", url: "https://www.makemytrip.com/hotels/ahilya_resort-details-maheshwar.html" }
 ];
 
 export const resortInfo = {
