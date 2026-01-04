@@ -143,10 +143,10 @@ export const roomCategories: RoomCategory[] = [
 ];
 
 export const amenities: Amenity[] = [
-  { id: "pool", name: "Swimming Pool", icon: "pool", description: "Outdoor swimming pool with river views" },
-  { id: "spa", name: "Ayurvedic Spa", icon: "spa", description: "Traditional wellness treatments" },
-  { id: "wifi", name: "Free WiFi", icon: "wifi", description: "High-speed internet throughout the resort" },
-  { id: "parking", name: "Free Parking", icon: "circle-parking", description: "Complimentary parking for all guests" }
+  { id: "wifi", name: "Free WiFi", icon: "wifi", description: "Fast & seamless internet access" },
+  { id: "parking", name: "Free Parking", icon: "circle-parking", description: "Complimentary & secure parking" },
+  { id: "service", name: "24/7 Room Service", icon: "service", description: "Comfort delivered to your room, anytime" },
+  { id: "hall", name: "Conference Hall", icon: "hall", description: "Professional space. Powerful impressions." },
 ];
 
 export const reviews: Review[] = [

@@ -4,7 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import HeroSlider from '@/components/HeroSlider';
 import { amenities, reviews, bookingPartners } from '@/data/resortData';
-import { Star, Phone, MapPin, Wifi } from 'lucide-react';
+import { Star, Phone, MapPin, Wifi, ConciergeBell, Users, Car } from 'lucide-react';
+import SignatureExperiencesBanner from '@/assets/Maheshwar Heritage & Culture Discovery.webp';
 
 const Index = () => {
   const getAmenityIcon = (iconName: string) => {
@@ -16,7 +17,11 @@ const Index = () => {
       case 'spa':
         return <div className="w-8 h-8 bg-resort-blue rounded-full flex items-center justify-center text-white text-xs">🧘</div>;
       case 'circle-parking':
-        return <div className="w-8 h-8 bg-resort-blue rounded-full flex items-center justify-center text-white text-xs">🅿️</div>;
+        return <Car className="w-8 h-8" />;
+      case 'service':
+        return <ConciergeBell className="w-8 h-8" />;
+      case 'hall':
+        return <Users className="w-8 h-8" />;
       default:
         return <div className="w-8 h-8 bg-resort-blue rounded-full" />;
     }
@@ -35,10 +40,7 @@ const Index = () => {
               Welcome to Ahilya Resort
             </h2>
             <p className="text-lg text-resort-dark mb-8 font-sans leading-relaxed">
-              Nestled along the sacred banks of the Narmada River in historic Maheshwar, 
-              Ahilya Resort offers an enchanting blend of royal heritage and modern luxury. 
-              Experience the timeless beauty of Madhya Pradesh while enjoying world-class 
-              amenities and warm hospitality.
+              Nestled in a peaceful setting just a short distance from historic Maheshwar, Ahilya Resort is surrounded by scenic hills and close to the sacred Narmada River. Enjoy the perfect blend of nature, tranquility, and modern luxury while experiencing world-class comfort and warm hospitality.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="font-rubik bg-resort-blue hover:bg-resort-navy" asChild>
@@ -121,37 +123,37 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="overflow-hidden hover:shadow-lg transition-shadow">
               <img 
-                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=250&fit=crop" 
-                alt="Riverside Dining"
+                src={SignatureExperiencesBanner} 
+                alt="Curated Narmada Sunset Experience"
                 className="w-full h-48 object-cover"
               />
               <CardContent className="p-6">
-                <h4 className="font-rubik font-semibold text-resort-navy mb-2">Riverside Dining</h4>
-                <p className="text-sm text-resort-dark font-sans">Savor authentic Malwa cuisine while watching the sunset over the Narmada</p>
+                <h4 className="font-rubik font-semibold text-resort-navy mb-2">Curated Narmada Sunset Experience</h4>
+                <p className="text-sm text-resort-dark font-sans">Enjoy a thoughtfully planned visit to the sacred Narmada ghats, where serene views, gentle river breezes, and a calm sunset moment create a deeply peaceful and memorable experience.</p>
               </CardContent>
             </Card>
             
             <Card className="overflow-hidden hover:shadow-lg transition-shadow">
               <img 
-                src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=400&h=250&fit=crop" 
-                alt="Cultural Tours"
+                src={SignatureExperiencesBanner} 
+                alt="Bonfire Evenings at the Resort"
                 className="w-full h-48 object-cover"
               />
               <CardContent className="p-6">
-                <h4 className="font-rubik font-semibold text-resort-navy mb-2">Cultural Tours</h4>
-                <p className="text-sm text-resort-dark font-sans">Explore Maheshwar's historic temples and traditional handloom workshops</p>
+                <h4 className="font-rubik font-semibold text-resort-navy mb-2">Bonfire Evenings at the Resort</h4>
+                <p className="text-sm text-resort-dark font-sans">Unwind after a day of exploration with a cozy bonfire evening at the resort, featuring warm lighting, relaxed seating, soft music, and conversations under a starlit sky.</p>
               </CardContent>
             </Card>
             
             <Card className="overflow-hidden hover:shadow-lg transition-shadow">
               <img 
-                src="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=400&h=250&fit=crop" 
-                alt="Ayurvedic Spa"
+                src={SignatureExperiencesBanner} 
+                alt="Maheshwar Heritage & Culture Discovery"
                 className="w-full h-48 object-cover"
               />
               <CardContent className="p-6">
-                <h4 className="font-rubik font-semibold text-resort-navy mb-2">Ayurvedic Spa</h4>
-                <p className="text-sm text-resort-dark font-sans">Rejuvenate with traditional wellness treatments and yoga sessions</p>
+                <h4 className="font-rubik font-semibold text-resort-navy mb-2">Maheshwar Heritage & Culture Discovery</h4>
+                <p className="text-sm text-resort-dark font-sans">Explore the timeless charm of Maheshwar through guided visits to historic forts, ghats, and local handloom traditions, followed by a relaxed return to the comfort of the resort.</p>
               </CardContent>
             </Card>
           </div>

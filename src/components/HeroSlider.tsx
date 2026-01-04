@@ -3,26 +3,27 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight, Phone, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import HeroBanner from '@/assets/Hero_Section_Banner.webp';
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
     {
-      image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=1920&h=1080&fit=crop",
-      title: "Discover Peace & Luxury",
+      image: HeroBanner,
+      title: "Resort in Maheshwar for a Comfortable & Peaceful Stay",
       subtitle: "at Ahilya Resort, Maheshwar",
       description: "Experience riverside tranquility in the heart of Madhya Pradesh"
     },
     {
-      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1920&h=1080&fit=crop",
-      title: "Riverside Serenity",
+      image: HeroBanner,
+      title: "Resort in Maheshwar: Escape to Comfort & Calm",
       subtitle: "Awaits You",
       description: "Wake up to stunning views of the sacred Narmada River"
     },
     {
-      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=1920&h=1080&fit=crop",
-      title: "Cultural Heritage",
+      image: HeroBanner,
+      title: "Resort in Maheshwar: Your Perfect Holiday Retreat",
       subtitle: "Meets Modern Luxury",
       description: "Immerse yourself in the rich traditions of Maheshwar"
     }
@@ -87,7 +88,7 @@ const HeroSlider = () => {
                 Book Your Stay
               </Link>
             </Button>
-            <Button
+            {/* <Button
               size="lg"
               variant="outline"
               className="font-rubik border-white text-white hover:bg-white hover:text-resort-navy text-lg px-8 py-3"
@@ -97,7 +98,7 @@ const HeroSlider = () => {
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

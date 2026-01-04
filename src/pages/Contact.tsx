@@ -5,8 +5,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { Phone, Mail, MapPin, Clock, MessageSquare } from 'lucide-react';
-import { resortInfo } from '@/data/resortData';
+import { Phone, Mail, MapPin, Clock, MessageSquare, Calendar, ExternalLink } from 'lucide-react';
+import { resortInfo, bookingPartners } from '@/data/resortData';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -161,6 +162,12 @@ const Contact = () => {
                   WhatsApp Us
                 </a>
               </Button>
+              <Button variant="outline" className="w-full border-resort-blue text-resort-blue hover:bg-resort-blue hover:text-white" asChild>
+                <Link to="/search" className="flex items-center justify-center gap-2">
+                  <Calendar className="w-4 h-4" />
+                  Check Availability
+                </Link>
+              </Button>
             </div>
           </div>
 
@@ -243,6 +250,53 @@ const Contact = () => {
           </Card>
         </div>
 
+        {/* How to Reach Us */}
+        <Card className="mt-12">
+          <CardHeader>
+            <CardTitle className="font-marcellus text-resort-navy">
+              How to Reach Us
+            </CardTitle>
+            <CardDescription className="font-sans">
+              Easy access from major transportation hubs
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="text-2xl">✈️</div>
+                  <div>
+                    <h4 className="font-rubik font-semibold text-resort-navy mb-2">
+                      From Devi Ahilya Bai Holkar Airport, Indore
+                    </h4>
+                    <p className="text-resort-dark font-sans mb-2 font-medium">By car / taxi</p>
+                    <ul className="text-resort-dark font-sans space-y-1 text-sm">
+                      <li>• Devi Ahilya Bai Holkar Airport is located approximately 90 km from Ahilya Resort.</li>
+                      <li>• The drive takes around 2.5–3 hours, offering a comfortable journey through scenic countryside routes.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="text-2xl">🚆</div>
+                  <div>
+                    <h4 className="font-rubik font-semibold text-resort-navy mb-2">
+                      From Indore Junction Railway Station
+                    </h4>
+                    <p className="text-resort-dark font-sans mb-2 font-medium">By car / taxi</p>
+                    <ul className="text-resort-dark font-sans space-y-1 text-sm">
+                      <li>• Indore Junction is about 95 km from the resort.</li>
+                      <li>• Guests can reach the property in around 3 hours via a smooth road journey.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Map Section */}
         <Card className="mt-12">
           <CardHeader>
@@ -254,10 +308,17 @@ const Contact = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="h-96 bg-resort-light rounded-lg flex items-center justify-center">
-              <p className="text-resort-dark font-sans">
-                Google Maps integration would be embedded here
-              </p>
+            <div className="w-full h-96 rounded-lg overflow-hidden">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1014.0965675730777!2d75.6149614887513!3d22.1779981235472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396265079d243ee9%3A0xfc93716a8dd1ae52!2sAhilya%20Resort!5e0!3m2!1sen!2sin!4v1767513525578!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style={{border: 0}} 
+                allowFullScreen 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Ahilya Resort Location"
+              />
             </div>
           </CardContent>
         </Card>
